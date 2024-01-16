@@ -5,7 +5,6 @@ import java.util.HashMap;
 public class RomanNumerical {
     public static void main(String[] args) {
         System.out.println(romtonum("IX"));
-        return;
     }
 
     static int romtonum(String str){
