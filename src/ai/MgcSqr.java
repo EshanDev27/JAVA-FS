@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MgcSqr {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an Odd integer");
         int n = sc.nextInt();
         if(n%2 == 0) {
             System.out.println("Please Enter an Odd integer");
@@ -15,7 +16,7 @@ public class MgcSqr {
         arr[i][j] = 1;
         for (int num = 2; num <= n * n; num++) {
             if( i-1 < 0 || j+1 >= n){
-                if(i-1 < 0 && j + 1 >= n){
+                if(i-1 < 0 && j + 1 >= n){ //Wrap Around
                     i = i + 1;
                 }
                 else if(i-1 < 0){
