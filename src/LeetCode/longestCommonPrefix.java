@@ -1,15 +1,21 @@
 package LeetCode;
 
+import java.util.Arrays;
+
 public class longestCommonPrefix {
     public static void main(String[] args) {
-        String[] str = {"ab", "a"};
-//        System.out.println(lcp(str));
-        String ans = lcp(str);
-        if(ans.equals("")){
-            System.out.println("No prefix");
-        }else{
-            System.out.println(ans);
+        String[] str = {"flower","flow","flight", "flat"};
+        Arrays.sort(str);
+        for(String s : str){
+            System.out.println(s);
         }
+//        System.out.println(lcp(str));
+//        String ans = lcp(str);
+//        if(ans.equals("")){
+//            System.out.println("No prefix");
+//        }else{
+//            System.out.println(ans);
+//        }
     }
 
     static String lcp(String[] str) {
