@@ -1,5 +1,5 @@
 package MultiThreading;
-
+import modifiers.*;
 class demo2 extends Thread{
     @Override
     public void run() {
@@ -9,8 +9,15 @@ class demo2 extends Thread{
     }
 }
 
+class demo6 extends Defaulteg{
+    void print(){
+        System.out.println(c);
+    }
+}
+
 public class driver {
     public static void main(String[] args) {
+
         demo2 t1 = new demo2();
         System.out.println(t1.getPriority());
         System.out.println(t1.getName());
