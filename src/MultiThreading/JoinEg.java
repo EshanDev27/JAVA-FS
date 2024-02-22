@@ -33,8 +33,8 @@ public class JoinEg {
         join2 t2 = new join2();
         join1 t1 = new join1(t2);
         t1.start();
+//        t1.start();
         t2.start();
         //        t1.join();
-
     }
 }

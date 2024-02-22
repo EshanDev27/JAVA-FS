@@ -50,6 +50,7 @@ public class ListCol {
         std.add(new student("Eshan", 8));
         std.add(new student("Aru", 3));
         std.add(new student("Maurya", 10));
+        System.out.println(std.hashCode());
 //        System.out.println(std.getClass());
         System.out.println(std.toString());
     }
