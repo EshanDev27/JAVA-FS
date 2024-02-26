@@ -1,8 +1,8 @@
 package LinkedList;
 
 public class sll {
-    node head;
-    static int size = 0;
+    private node head;
+    private int size = 0;
     class node{
         int data;
         node next;
@@ -12,14 +12,13 @@ public class sll {
         }
     }
 
-    public void printll(sll list) {
-        node temp = list.head;
+    public void printll() {
+        node temp = head;
         while (temp != null) {
-            System.out.println(temp.data);
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
     }
-
 
     public void addFirst(int data){
         node temp = new node(data);
@@ -96,9 +95,24 @@ public class sll {
         size--;
     }
 
+    public node reverse(node start) {
+        node prev = start;
+        node curr = start.next;
+        while (curr != null) {
+            node next = curr.next;
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+        start.next = null;
+        start = prev;
+        return start;
+    }
 
     public static void main(String[] args) {
         sll list = new sll();
+        sll new_list = new sll();
         list.addFirst(10);
         list.addFirst(20);
         list.addFirst(30);
@@ -107,11 +121,16 @@ public class sll {
         list.addFirst(35);
         list.addLast(5);
         list.addBetween(2, 15);
-        list.printll(list);
-        System.out.println("Size of LinkedList is : " + size);
-        System.out.println("-------------------");
-        list.deleteBetween(2);
-        list.printll(list);
-        System.out.println("Size of LinkedList is : " + size);
+        list.printll();
+        System.out.println();
+        list.head = list.reverse(list.head);
+        list.printll();
+
+        System.out.println();
+        new_list.addFirst(1);
+        new_list.addFirst(2);
+        new_list.addFirst(3);
+        new_list.addFirst(4);
+        new_list.printll();
     }
 }
